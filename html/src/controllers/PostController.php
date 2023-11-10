@@ -9,7 +9,7 @@ class PostController extends BaseController
     public function addPost()
     {
         $post = new Post();
-        if (!empty($_POST)){
+        if (!empty($_POST) && isset($_POST['title']) && isset($_POST['text']) && !empty($_POST['title']) && !empty($_POST['text'])){
             $post->title = $_POST['title'];
             $post->text = $_POST['text'];
             $post->id_user = $_SESSION['id_user'];
