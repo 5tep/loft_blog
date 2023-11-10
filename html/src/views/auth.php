@@ -2,13 +2,13 @@
 <div style="position: relative;   vertical-align: top;  display: inline-block;  width: 423px; text-align: left;">
         
         <div>
-            <h2>Регистрация</h2>
+            <h2>Регистрация {{type}}</h2>
         </div>
 		<?php if (isset($data['error'])):?>
-			<p style='color:red;'><?= $data['error']?></p>
+			<p style='color:red;'>{{error}}</p>
 		<?php endif; ?>
 		<?php if (isset($data['info'])):?>
-			<p style='color:green;'><?= $data['info']?></p>
+			<p style='color:green;'>{{info}}</p>
 		<?php endif; ?>
 		<div>E-mail:</div>
 		<div><input name="email"></div>
