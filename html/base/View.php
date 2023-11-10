@@ -7,5 +7,11 @@ class View {
     {
         include $path;        
     }
+    public function renderTwig($path, $data = null)
+    {
+        $loader = new \Twig\Loader\FilesystemLoader(VIEW_DIR);
+        $twig = new \Twig\Environment($loader);
+        echo $twig->render($path, $data);        
+    }
 }
 ?>
